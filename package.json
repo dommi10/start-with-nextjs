@@ -8,13 +8,17 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
+    "autoprefixer": "10.2.1",
     "graphql": "15.4.0",
     "graphql-tag": "2.11.0",
     "next": "latest",
     "next-urql": "2.1.1",
+    "postcss": "8.2.3",
+    "postcss-preset-env": "6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "17.0.1",
+    "tailwindcss": "2.0.2",
     "urql": "1.11.5"
   },
   "license": "MIT",

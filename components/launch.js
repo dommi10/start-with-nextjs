@@ -1,6 +1,6 @@
 import React from "react";
 import gql from "graphql-tag";
-import { useQuery } from "url";
+import { useQuery } from "urql";
 
 const queryLanch = gql`
   query landpads($limit: Int) {
@@ -16,19 +16,19 @@ const LandPads = () => {
 
   console.log({ result });
 
-  if (result.fetching || !result.data) return <h4>Loading</h4>;
+  if (result.fetching) return <h4 className="w-full">Loading</h4>;
 
   if (result.error) return <span>Something Wrong!!</span>;
 
   return (
-    <>
-      <span>List of lands</span>
-      {result.data.map((land) => (
+    <div className="flex flex-col items-center justify-between p-8">
+      <span className="text-gray-500">List of lands</span>
+      {result.data.landpads.map((land) => (
         <div key={land.id}>
           <p>{land.details}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

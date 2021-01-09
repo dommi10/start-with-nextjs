@@ -14,5 +14,5 @@ const IndexPage = () => (
 );
 
 export default withUrqlClient(() => ({
-  url: "https://graphql.org/swapi-graphql"
+  url: "https://api.spacex.land/graphql/"
 }))(IndexPage);
