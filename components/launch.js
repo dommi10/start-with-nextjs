@@ -1,8 +1,8 @@
 import React from "react";
 import gql from "graphql-tag";
-import useQuery from "url";
+import { useQuery } from "url";
 
-const queryLacnch = gql`
+const queryLanch = gql`
   query landpads($limit: Int) {
     landpads(limit: $limit) {
       details
@@ -12,10 +12,7 @@ const queryLacnch = gql`
 `;
 
 const LandPads = () => {
-  const [result] = useQuery({
-    query: queryLacnch,
-    variables: { limit: 10 }
-  });
+  const [result] = useQuery({ query: queryLanch, variables: { limit: 10 } });
 
   console.log({ result });
 

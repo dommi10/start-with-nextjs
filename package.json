@@ -8,6 +8,7 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
+    "graphql": "15.4.0",
     "graphql-tag": "2.11.0",
     "next": "latest",
     "next-urql": "2.1.1",
