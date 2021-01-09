@@ -22,7 +22,7 @@ const LandPads = () => {
 
   return (
     <div className="flex flex-col items-center justify-between p-8">
-      <span className="text-gray-500">List of lands</span>
+      <span className="text-white">List of lands</span>
       {result.data.landpads.map((land) => (
         <div key={land.id}>
           <p>{land.details}</p>
